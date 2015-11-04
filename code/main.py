@@ -6,7 +6,7 @@ import os
 import config
 
 app = Flask(__name__)
-redis = Redis(host='redis', port=6379)
+redis = Redis(host=config.REDIS_ADDR, port=6379)
 
 
 @app.route('/')
